@@ -12,6 +12,7 @@ import themeChangeIcon from "../../assets/images/sidebar/theme-change-icon.svg";
 import sidebarResizeBtn from "../../assets/images/sidebar/sidebar-resize-btn.svg";
 import togglerIcon from "../../assets/images/sidebar/toggler-icon.svg";
 
+
 const sidebarItemList = [
   {
     id: crypto.randomUUID(),
@@ -87,10 +88,14 @@ const Sidebar = () => {
               <img src={item.icon} alt={item.title} />
               <a
                 href="#"
-                className={`font-sora ${item.title === "Chat" ? "text-active-fg" : "text-primary-fg"
+                className={`flex w-full justify-between items-center font-sora ${item.title === "Chat" ? "text-active-fg" : "text-primary-fg"
                   } leading-3 text-dashboard`}
               >
                 {item.title}
+
+                {item.hasChild && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="#141B34" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>}
               </a>
             </li>
           ))}

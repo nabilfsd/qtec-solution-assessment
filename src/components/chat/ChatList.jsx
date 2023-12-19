@@ -112,7 +112,7 @@ const ChatList = () => {
       </nav>
 
       {/* chat contact list */}
-      <div id="contact-list-wrapper" className="h-screen overflow-y-auto">
+      <div id="contact-list-wrapper">
         {
           contactList.map((contact, index) => (
             <div key={contact.id} className="flex gap-3 w-full px-[14px] pt-[14px] pb-4 border-b border-border-bg">
